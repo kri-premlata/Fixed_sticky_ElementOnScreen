@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 500px;
+    height: 400px;
+    background-color:blue;
+    /* position relative is used for moving element on the particular box or element  */
+    position: relative;
+    top: 20%;
+    left: 30%;
+    
+}
+.box1{
+    height: 300px;
+    width: 200px;
+    background-color: aqua;
+    /* postion absolute is used for flying that div/element on the basis of body and html */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    /* z-index is used for managing layer like top or bottom of container or body*/
+    z-index: 1;
+}
+.box2{
+    width: 150px;
+    height: 200px;
+    background-color: brown;
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    transform: translate(50%, 50%);
+    /* the way to use of linear-gradient */
+    /* background: linear-gradient(direction, red,brown,blue); */
+}
+
+
+/* class 12 */
+
+.container2{
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+.container3{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 202, 50);
+}
+h1{
+    width: 20%;
+    /* padding: 10%; */
+    background-color: #9b67ef;
+    position: fixed;
+    /* text-align: center; */
+    
+
+}
+h2{
+    width: 30%;
+    /* height: 30%; */
+    background-color: aquamarine;
+    position: sticky;
+    top: 10%;
+}
+.box3{
+width: 20%;
+height: 30%;
+background-color: black;
+position: absolute;
+left: 0;
+/* animation: boxmove 2s linear 1s  infinite forwards; */
+/* animation: boxmove 2s linear 1s  2 forwards; */
+/* animation: boxmove 3s linear 1s  2 backwards; */
+animation: boxmove 3s linear 1s  2 both;
+/* backwards(starts the animations from "FROM" to "TO") */
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes boxmove {
+    from{
+        left: 10%;
+    }to{
+        left: 50%;
+
+    }
+}
+
